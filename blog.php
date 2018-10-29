@@ -2,7 +2,7 @@
 // molte delle funzioni seguenti sono già state dscritte in index.php
 /*
 Questa pagina mostra gli articoli del nostro miniblog
-legge da DB e presenta tutti i post di tipo post
+legge da DB e presenta tutti i record di tipo post
 */
 require_once('functions.php'); // ormai sapete cosa fa
 ?>
