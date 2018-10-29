@@ -17,6 +17,17 @@ $array=array(
     */
 );
 
+if($_COOKIE['LOGIN']){
+    // se sono autenticato aggiungo una riga al menu principale, quella della pagina admin
+    $array['admin'] = 'admin.php';
+}
+
+// questo array mi permette di configurare un ulteriore menu, quello della pagina di admin
+$arrayAdmin=array(
+    'Pagine'=>'#',
+    'Post'=>'adminPost.php'
+);
+
 function buildmenu ($idwrapper, $array){
     /*  questa funzione construisce una lista di link, comunemente nota come menu
         prevede due parametri:
