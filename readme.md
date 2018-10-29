@@ -15,7 +15,7 @@ non è necessario che lo leggiate interamente, potete anche procedere un pò
 alla volta concentrandovi solo sulle funzioni utilizzate nelle singole pagine
 che ho indicato in sequenza.
 
-##I miei riferimenti:
+## I miei riferimenti
 
 - e-mail: mikymartin@gmail.com
 - cell/whatsapp: +393472738963
