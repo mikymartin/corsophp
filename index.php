@@ -1,4 +1,7 @@
 <?php
+/*
+ * Questa è la pagina con cui si amministrano i contenuti nel blog
+ * Vi permetterà di inserire POST e PAGINE */
 require_once('functions.php');
 /*  la funzione require_once è uno dei modi possibili per includere (portare dentro un file)
     il contenuto di un'altro file.
