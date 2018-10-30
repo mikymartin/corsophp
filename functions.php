@@ -12,7 +12,7 @@ $array=array(
     'Login'=>'login.php'
     /*
     
-    Compitino: fare in modo che l'array sia generato leggendo il DB usando i post di tipo page
+    ## ESERCIZIO ##: fare in modo che l'array sia generato leggendo il DB usando i post di tipo page
     
     */
 );

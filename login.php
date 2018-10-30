@@ -32,7 +32,7 @@ if($_GET['logout']=='yes'){
 ?>
 
 <?php
-// Compitino, trasformare la procedura di connessione in funzione, è sempre la stessa in tutte le pagine
+// ## ESERCIZIO ##, trasformare la procedura di connessione in funzione, è sempre la stessa in tutte le pagine
 // connessione al DB
 $link = mysqli_connect("localhost", "utentecorsophp", "password", "corsophp");
 // gestione degli errori

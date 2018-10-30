@@ -20,7 +20,7 @@ rappresenta la connessione con il DB. Se non ci riesce non restituisce nulla
     che abbia i diritti di Lettura (come minimo) sul DB
 */
 
-//Compitino: salvare i dati necessari alla connessione in variabili... oppure in un array
+//## ESERCIZIO ##: salvare i dati necessari alla connessione in variabili... oppure in un array
 $link = mysqli_connect("localhost", "utentecorsophp", "password", "corsophp");
 
 if (!$link) {
@@ -49,7 +49,7 @@ if (!$link) {
 /* stampo un messaggio per rendere esplicito il risultato, è possibile nasconderlo 
     commentando le due righe successive */
 
-// compitino: sostiturire "my_db" con il nome del database
+// ## ESERCIZIO ##: sostiturire "my_db" con il nome del database
 echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
 echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
 
