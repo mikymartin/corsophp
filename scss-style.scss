@@ -1,5 +1,18 @@
-html{
-    font-size: 16px;
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-ott-2018, 14.25.41
+    Author     : michelemartinello
+*/
+
+/*SCSS variable*/
+$titleh2-font-size: 2rem;
+
+h2{
+    font-size:$titleh2-font-size;
 }
 
 /* Bordered form */
@@ -65,7 +78,6 @@ span.psw {
     float: none;
 }
 
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (min-width: 400px) {
     span.psw {
@@ -76,3 +88,4 @@ span.psw {
         width: auto;
     }
 }
+
