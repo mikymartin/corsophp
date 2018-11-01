@@ -206,7 +206,9 @@ mysqli_close($link);
                 il php è fatto per lavorare mischiandosi all'html, non approfittatene troppo
                 non è facile leggere una sequenza di graffe aperte e chiuse in questo modo
                 */
-                }    
+                } else{
+                    echo"<h2>Bentornato</h2><p>Ti sei già autenticato</p>";
+                }
             
             ?>
         </div>

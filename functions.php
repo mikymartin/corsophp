@@ -7,9 +7,9 @@ $array=array(
     'index.php' sarà la destinazione del link che verrà generato con la funzione buildmenu
     ed apparirà quindi nella proprietà href del link 
     */
-    'Home'=>'index.php',
-    'il mio blog'=>'blog.php',
-    'Login'=>'login.php'
+    'Home'=>'/php/corso/index.php',
+    'il mio blog'=>'/php/corso/blog.php',
+    'Login'=>'/php/corso/login.php'
     /*
     
     ## ESERCIZIO ##: fare in modo che l'array sia generato leggendo il DB usando i post di tipo page
@@ -19,13 +19,13 @@ $array=array(
 
 if($_COOKIE['LOGIN']){
     // se sono autenticato aggiungo una riga al menu principale, quella della pagina admin
-    $array['admin'] = 'admin.php';
+    $array['admin'] = '/php/corso/admin/admin.php';
 }
 
 // questo array mi permette di configurare un ulteriore menu, quello della pagina di admin
 $arrayAdmin=array(
     'Pagine'=>'#',
-    'Post'=>'adminPost.php'
+    'Post'=>'/php/corso/admin/adminPost.php'
 );
 
 function buildmenu ($idwrapper, $array){

@@ -1,9 +1,10 @@
 <?php
-require_once('functions.php');
+require_once('../functions.php');
 /*  la funzione require_once è uno dei modi possibili per includere (portare dentro un file)
     il contenuto di un'altro file.
     Consultate il manuale php.net cercando require_once per capirne le caratteristiche,
     se non vi sono chiare chiedete pure a me
+ *  Fate attenzione, è cambiato il percorso per raggiungere il file functions.php
 */
 ?>
 
@@ -81,7 +82,7 @@ eseguite quindi le vostre operazioni prima di chudere la connessione, ad es:
         if($_COOKIE['LOGIN']){
                     // stampo il bottone bottone di logout
                     echo"<p>Benvenuto ".$_COOKIE['LOGIN']."</p>";
-                    echo'<a href="login.php?logout=yes">Logout</a>';
+                    echo'<a href="../login.php?logout=yes">Logout</a>';
         }
         ?>
             <?php

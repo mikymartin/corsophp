@@ -4,7 +4,7 @@
 Questa pagina mostra gli articoli del nostro miniblog
 legge da DB e presenta tutti i record di tipo post
 */
-require_once('functions.php'); // ormai sapete cosa fa
+require_once('../functions.php'); // ormai sapete cosa fa
 ?>
 <?php
 // stabilisco una connessione con il DB
@@ -83,7 +83,24 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
             echo buildmenu('ilMiomenu',$array);
             ?>
         <div class="content">
-            <?php
+            
+<?php
+        /*Questa sezione verrà mostrata solo se autenticati
+        * in caso contrario verrà mostrato un testo che invita ad autenticarsi
+         *  */
+        if(!$_COOKIE['LOGIN']){
+            echo'<p class="error">Per accedere all\'admin dovrete <a href="login.php">autenticarvi</a></p>';
+        }else{
+            
+          /*
+           * Nella sezione else ci metto tutto il codice che deve essere eseguito solo dopo
+           * autenticazione
+           */
+         echo'<h2>Amministrazione</h2>';
+        // aggiungo un ulteriore menu... un sottomenu se volete chiamarlo così
+        echo buildmenu('submenu',$arrayAdmin);
+        // $arrayAdmin si trova in function.php 
+     
             // qui cicliamo la risorsa di database e stampiamo titolo, excerpt e bottone more
             /*
              while è uno dei costrutti per controllare un ciclo
@@ -110,13 +127,14 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
             while($row = mysqli_fetch_assoc($result)){
                 echo'<article>';
                 echo '<h2>'.$row['title'].'</h2>';
+                echo'<div class="date">data di creazione'.$row['datecreation'].'</div>';
                 /*['title'] corrisponde al valore della colonna title in questa riga della risorsa*/
                 echo '<div class="excerpt">'.excerpt($row['content'],'140').'</div>';
                 /*['content'] corrisponde al valore della colonna content in questa riga della risorsa 
                     la funzione excerpt è spiegata in function.php
                     */
                 
-                echo '<a href="single.php?postid='.$row['id'].'" class="button more">More</a>';
+                echo '<a href="single.php?postid='.$row['id'].'" class="button more">MODIFICA</a>';
                 //['id']corrisponde al valore della colonna id in questa riga della risorsa 
                 /*
                 mi serve per costruire un link alla pagina dettaglio, nell'url passeremo
@@ -124,9 +142,11 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
                 il parametro verrà usato in una query per individuare un record preciso
                 nella tabella posts
                 */
-               echo'</article>';     
+                echo'</article>';
             }
-
+            
+            
+             }
             ?>
         </div>
     
