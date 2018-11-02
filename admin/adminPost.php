@@ -2,7 +2,10 @@
 // molte delle funzioni seguenti sono già state dscritte in index.php
 /*
 Questa pagina mostra gli articoli del nostro miniblog
-legge da DB e presenta tutti i record di tipo post
+ *legge da DB, presenta tutti i record di tipo post e mette a disposizione un link 
+ * per modificarli
+ * 
+ * ESERCIZIO : realizzare la pgina per inserire un nuovo post
 */
 require_once('../functions.php'); // ormai sapete cosa fa
 ?>
@@ -134,7 +137,7 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
                     la funzione excerpt è spiegata in function.php
                     */
                 
-                echo '<a href="single.php?postid='.$row['id'].'" class="button more">MODIFICA</a>';
+                echo '<a href="updateForm.php?postid='.$row['id'].'" class="button more">MODIFICA</a>';
                 //['id']corrisponde al valore della colonna id in questa riga della risorsa 
                 /*
                 mi serve per costruire un link alla pagina dettaglio, nell'url passeremo

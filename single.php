@@ -1,7 +1,7 @@
 <?php
 /*
-Questa pagina mostra il dettaglio di un articolo del nostro miniblog
-legge da DB e presenta tutti i post di tipo post
+Questa pagina mostra il singolo articolo, l'id del post da aprire viene passata tramite
+ * il parametro id= , quest'ultimo potrà essere recuperato tramite l'array $_GET
 */
 require_once('functions.php');// la conoscete
 ?>
