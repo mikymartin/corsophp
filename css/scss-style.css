@@ -1,7 +1,11 @@
+@charset "UTF-8";
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Questo è un file SCSS
+    NON va linkato direttamente questo file al proprio sito, esso va prima COMPILATO!
+    il file da linkare è quello risultato dalla compilazione: css/scss-stile.css (vedete che è .CSS)
+
+    se netBeans è stato configurato correttamente ad ogni salvataggio il file SCSS verrà compilato
+    e verranno generati due file nella cartella css, essi dovranno essere caricati entrambi nel vostro sito
 */
 /* 
     Created on : 30-ott-2018, 14.25.41

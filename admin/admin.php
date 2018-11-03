@@ -74,7 +74,7 @@ eseguite quindi le vostre operazioni prima di chudere la connessione, ad es:
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/scss-style.css">
     </head>
     
     <body>
