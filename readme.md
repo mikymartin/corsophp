@@ -2,13 +2,13 @@
 
 Descrivo rapidamente la sequenza di lettura del materiale contenuto in questi file.
 
-Prima leggere il file index.php e function.php
-Poi il file blog.php
-Poi il file single.php
-Poi il file login.php
-poi il file admin/admin.php
-poi il file admin/adminpost.php
-poi il file admin/updateForm.php
+- Prima leggere il file index.php e function.php
+- Poi il file blog.php
+- Poi il file single.php
+- Poi il file login.php
+- poi il file admin/admin.php
+- poi il file admin/adminpost.php
+- poi il file admin/updateForm.php
 
 Troverete i file estesamente commentati.
 
@@ -47,6 +47,5 @@ e poi configurare netbeans per usarlo
 
 ## I miei riferimenti:
 
-e-mail: mikymartin@gmail.com
-cell/whatsapp: +393472738963
-
+- e-mail: mikymartin@gmail.com
+- cell/whatsapp: +393472738963
