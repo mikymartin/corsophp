@@ -1,4 +1,4 @@
-#DOCUMENTAZIONE
+# DOCUMENTAZIONE
 
 Descrivo rapidamente la sequenza di lettura del materiale contenuto in questi file.
 
@@ -17,13 +17,13 @@ non è necessario che lo leggiate interamente, potete anche procedere un pò
 alla volta concentrandovi solo sulle funzioni utilizzate nelle singole pagine
 che ho indicato in sequenza.
 
-##Esercizi
+## Esercizi
 Troverete degli esercizi da fare, modifiche di diversa entità, dalla creazione di nuove variabili,
 alla creazione di nuove query e costruzione di intere pagine
 
 Volutamente non ho stilizzato la maggior parte delle pagine, lo lascio a voi per fare pratica con i css
 
-##scss??
+## scss??
 Troverete anche un file .scss... cosè?!
 E' un file scritto per il preprocessore SASS 
 
@@ -45,7 +45,7 @@ https://sass-lang.com/install
 
 e poi configurare netbeans per usarlo
 
-##I miei riferimenti:
+## I miei riferimenti:
 
 e-mail: mikymartin@gmail.com
 cell/whatsapp: +393472738963
