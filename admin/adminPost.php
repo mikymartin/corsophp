@@ -159,6 +159,6 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
 
 <?php
 /*
-    Ora proseguite con la pagina single.php
+    Ora proseguite con la pagina updateForm.php
 */
 ?>

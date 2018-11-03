@@ -1,5 +1,15 @@
 <?php
-
+/*
+ * Questo file verrà importato in tutte le pagine del miniblog, può quindi fungere da file di configurazione
+ * Un file di configurazione contiene variabili e costanti che controllano alcuni aspetti dell'intero sito
+ * 
+ * Un esempio sono gli array $array e $arrayAdmin
+ * 
+ * questi contengono la le pagine dei menu che vengono utilizzate nell'intero sito
+ * 
+ * Un'altro esempio potrebbero essere le credenziali per accedere al DB
+ * 
+ *  */
 $array=array(
     /*  Array degli elementi del menu 
     ogni record (riga) dovrà avere una etichetta ed una destinazione:
@@ -19,16 +29,23 @@ $array=array(
 
 if($_COOKIE['LOGIN']){
     // se sono autenticato aggiungo una riga al menu principale, quella della pagina admin
+    // la sintassi che segue $array['admin'] aggiunge una riga all'array $array assegnando
+    // alla chiave 'admin', che non esisteva ancora, il valore a destra dell'uguale
+    
     $array['admin'] = '/php/corso/admin/admin.php';
+    
+    // è l'equivalente, più breve, della funzione array_push
 }
 
 // questo array mi permette di configurare un ulteriore menu, quello della pagina di admin
+
 $arrayAdmin=array(
     'Pagine'=>'#',
     'Post'=>'/php/corso/admin/adminPost.php'
 );
 
 function buildmenu ($idwrapper, $array){
+    
     /*  questa funzione construisce una lista di link, comunemente nota come menu
         prevede due parametri:
         
@@ -52,7 +69,6 @@ function buildmenu ($idwrapper, $array){
         Non stamperanno nulla perchè $a non esiste all'interno della funzione e $b esiste solo
         all'interno di essa
         
-        
         Un modo per andare oltre questo comportamento è quello di accedere alla variabile globale
         
         $a=5
@@ -68,11 +84,11 @@ function buildmenu ($idwrapper, $array){
         Ogni volta che dichiariamo una variabile in uno script essa viene aggiunta alla lista global
         delle variabili, qualsiasi $qualcosa dichiareremo verrà aggiunta... e sovrascritta in caso
         di omonimia, quindi occhio, non affidatevi troppo ad essa
-        
-        
+
     */
     
     $list="<ul id=\"$idwrapper\">";
+    
     /* foreach è un costrutto per ciclare un array, continuerà a ciclare l'array finchè non arriverà
         alla fine poi resetterà il puntatore del ciclo all'inizio (con php 7),
         http://php.net/manual/en/control-structures.foreach.php  
@@ -82,7 +98,10 @@ function buildmenu ($idwrapper, $array){
     */
     foreach($array as $etichetta=>$link){
         $list.='<li><a href="'.$link.'">'.$etichetta.'</a></li>';
-        /* .= è un concatenamento e va letto così: 
+        
+        /* 
+           .= è un concatenamento e va letto così: 
+         
            prendi quello che è già presente nella variabile a sinistra del punto 
            (nel nostro caso $list) e attaccagli quello che c'è a destra dell'uguale
            ora il valore di $list sarà
@@ -135,7 +154,7 @@ function excerpt($string,$length)
 
 
 function settaCookie($ID_UTENTE, $TEMPO){
-            // creaiamo un cookies, gli assegnamo in valore e definiamo quanto deve durare
+            // creiamo un cookies, gli assegnamo in valore e definiamo quanto deve durare
             setcookie('LOGIN', $ID_UTENTE, time()+$TEMPO); // Identifica l'utente
       }
 

@@ -115,6 +115,6 @@ eseguite quindi le vostre operazioni prima di chudere la connessione, ad es:
 </html>
 <?php
 /*
-    Ora proseguite con la pagina blog.php
+    Ora proseguite con la pagina adminPost.php
 */
 ?>
