@@ -79,7 +79,7 @@ mysqli_close($link);// finito le operazioni chiudo la connessione
         if($_COOKIE['LOGIN']){
                     // stampo il bottone bottone di logout
                     echo"<p>Benvenuto ".$_COOKIE['LOGIN']."</p>";
-                    echo'<a href="login.php?logout=yes">Logout</a>';
+                    echo'<a href="../login.php?logout=yes">Logout</a>';
         }
         
             // il menu ormai lo conoscete (vedi function.php)
