@@ -92,7 +92,7 @@ $result=mysqli_query($link,$query);
 ```
 ## Accedere ai dati del risultato di una query
 
-Supponendo di usare la query precedente utilizzerete un ciclo [while] ( http://php.net/while)
+Supponendo di usare la query precedente utilizzerete un ciclo [while]( http://php.net/while)
 il ciclo while si esegiurà finche l'espressione tra parentesi è vera, nel caso specifico finchè
 $row avrà un valore, cioè finchè mysqli_fetch_assoc($result) 
 troverà una riga (detta anche recordset) in $result.
