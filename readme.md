@@ -93,6 +93,7 @@ $result=mysqli_query($link,$query);
 ## Accedere ai dati del risultato di una query
 
 Supponendo di usare la query precedente utilizzerete un ciclo [while]( http://php.net/while)
+
 il ciclo while si esegiurà finche l'espressione tra parentesi è vera, nel caso specifico finchè
 $row avrà un valore, cioè finchè mysqli_fetch_assoc($result) 
 troverà una riga (detta anche recordset) in $result.
@@ -144,7 +145,7 @@ perchè il numero degli inserimenti dovrà essere uguale al numero dei campi dic
     mysqli_query($link,$queryupdate);
 ```
 ## E come invio i dati ad un DB? ##
-Con un form
+Con un [form](https://www.html.it/pag/16069/struttura-del-tag-form/)
 
 ```php
 <form enctype="multipart/form-data" action="updateForm.php" method="post">
