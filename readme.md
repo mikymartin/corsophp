@@ -128,7 +128,7 @@ Prima di tutto dovrete connetervi al DB poi potrete eseguire
 ```php
     $query = "INSERT INTO posts ('id','datecreation','title','content') VALUES ('', '','$title','$content')";
 ```
-Nella prima coppia parentesi vengono dichiarati i nomi dei campi della tabella
+Nella prima coppia di parentesi vengono dichiarati i nomi dei campi della tabella
 nella seconda coppia di parentesi i valori che verranno inseriti
 
 Notate i due apici singoli '' come valori dei due primi campi, non verrà inserito nulla ma dovranno essere dichiarati comunque)
@@ -142,4 +142,40 @@ perchè il numero degli inserimenti dovrà essere uguale al numero dei campi dic
     $queryupdate="UPDATE posts SET  title='".$title"', content='".$content."' WHERE id=".$id;
     // echo"QUERY AGGIORNAMENTO $queryupdate"; // se volete vederla a schermo
     mysqli_query($link,$queryupdate);
+```
+## E come invio i dati ad un DB? ##
+Con un form
+
+```php
+<form enctype="multipart/form-data" action="updateForm.php" method="post">
+
+<input type="hidden" name="action" value="update">
+<input type="hidden" name="id" value="<?php echo($row['id']) ?>">
+<div class="container"> 
+ <?php echo($row['datecreation']); ?>
+ <label for="title"><b>Titolo</b></label><br>
+ <input type="text"  name="title" style="width:100%"  value="<?php  echo($row['title'])   ?>" required><br>
+
+ <label for="content"><b>Contenuto</b></label><br>
+<textarea rows="20" name="content" style="width:100%;" required>
+<?php echo($row['content']) ?>
+</textarea><br>
+
+<button type="submit">Aggiorna</button><br>
+<button type="button" class="cancelbtn">Cancel</button>
+</div>
+
+</form>
+
+```
+
+form è il tag che crea un modulo di invio dati, le sue proprietà più importanti sono:
+- enctype
+- action (indica la pagina dove verrà inviato i form e dove ci sarà la logica che opererà sui dati)
+- method
+
+nella pagina indicata in action= i dati verranno letti così, es:
+```php
+$title=$_POST['title'];
+dove ['title'] è il nome del campo contenuto nel form
 ```
