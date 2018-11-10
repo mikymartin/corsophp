@@ -134,7 +134,7 @@ nella seconda coppia di parentesi i valori che verranno inseriti
 Notate i due apici singoli '' come valori dei due primi campi, non verrà inserito nulla ma dovranno essere dichiarati comunque)
 perchè il numero degli inserimenti dovrà essere uguale al numero dei campi dichiarati e nel corrispondete ordine
 
-**OCCHIO SONO DUE APICI SINGOLI ' ** (quello sotto il punto di domanda)
+**OCCHIO SONO DUE APICI SINGOLI '** (quello sotto il punto di domanda)
 
 ### Query di aggiornamento
 
