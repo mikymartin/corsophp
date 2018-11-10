@@ -51,7 +51,7 @@ e poi configurare netbeans per usarlo https://medium.com/@raaechelb/sass-install
 
 ## I miei riferimenti:
 
-![me]:(https://avatars0.githubusercontent.com/u/1137971?s=460&v=4 "Michele Martinello")
+![me](https://avatars0.githubusercontent.com/u/1137971?s=460&v=4 "Michele Martinello")
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 
