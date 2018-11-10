@@ -84,4 +84,32 @@ $query="SELECT id, postType, datecreation, title, content FROM posts
     con cui viene interrogato il DB
 */
 $result=mysqli_query($link,$query);
+// il risultato viene salvato in $result
 ```
+## Accedere ai dati del risultato di una query
+
+Supponendo di usare la query precedente utilizzerete un ciclo while
+il ciclo while si esegiurà finche l'espressione tra parentesi è vera, nel caso specifico finchè
+$row avrà un valore, cioè finchè mysqli_fetch_assoc($result) 
+troverà una riga (detta anche recordset) in $result.
+Ogni volta che viene trovata una riga il puntatore del ciclo while viene fatto avanzaredi uno,
+procedendo così fino alla fine della risorsa $result
+
+```php
+            while($row = mysqli_fetch_assoc($result)){
+               $id=$row['id'];
+               $postType=$row['postType'];
+               $datadiCreazione=$row['datecreation'];
+               $titolo=$row['title'];
+               $titolo=$row['content']; 
+               // qui dovrete fare qualcosa, tipo stampare (echo) questi valori
+               // magari insieme a dei tag HTML per dare una struttura 
+               // alla presentazione di questi dati
+            }
+```
+`**NON potete fare due cicli while di fila** sulla medesima risorsa ($result), 
+senza aver prima resettato il puntatore di $result.
+Quindi se dovrete ripetere il ciclo while su $result resettate il puntatore con il comando
+```php
+mysqli_data_seek ($result , 0);
+``
