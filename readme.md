@@ -180,3 +180,10 @@ nella pagina indicata in action= i dati verranno letti così, es:
 $title=$_POST['title'];
 ```
 dove ['title'] è il nome del campo contenuto nel form
+
+## Autenticare un utente ##
+E' possibile autenticare un utente in molti modi, i più diffusi sono via session del server oppure via cookie.
+
+Un buon articolo è il seguente https://www.html.it/articoli/gestire-gli-utenti-con-php/
+
+Per quanto ci riguarda noi useremo un'autenticazione via [cookie](https://www.html.it/articoli/gestione-dei-cookie/) 
