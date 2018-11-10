@@ -134,9 +134,7 @@ Prima di tutto dovrete connetervi al DB poi potrete eseguire
     // dovrà essere uguale al numero dei campi dichiarati e nel corrispondete ordine
     // OCCHIO SONO DUE APICI SINGOLI ' (quello sotto il punto di domanda)
 
-``
-
-`
+```
 ### Query di aggiornamento
 
 ```php
