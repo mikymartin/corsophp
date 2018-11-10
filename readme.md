@@ -49,3 +49,39 @@ e poi configurare netbeans per usarlo
 
 - e-mail: mikymartin@gmail.com
 - cell/whatsapp: +393472738963
+
+# How TO
+
+## Connettersi ad un DB con PHP e chiudere la connessione
+
+```php
+$link = mysqli_connect("localhost", "utentecorsophp", "password", "corsophp");
+
+// gestione errori di connessione, vengono stampati solo se la connessione fallisce
+// il ! significa negazione quindi !$link si legge come "se $link non c'è"
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+```
+dopo aver fatto tutto ciò che serve nel DB chiudete la connessione
+
+```php
+mysqli_close($link);
+```
+## Eseguire una query in una tabella del DB
+
+```php
+$query="SELECT id, postType, datecreation, title, content FROM posts
+        WHERE postType='post' 
+        ORDER BY datecreation DESC";
+
+/* eseguo la query con la funzione mysqli_query e salvo il risultato in una variabile $result
+    la funzione accetta due parametri:
+    il primo ($link) è l'oggetto che rappresenta la connessione con il DB, il secondo è la query
+    con cui viene interrogato il DB
+*/
+$result=mysqli_query($link,$query);
+```
