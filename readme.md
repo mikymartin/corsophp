@@ -1,6 +1,10 @@
 # DOCUMENTAZIONE
 
-Descrivo rapidamente la sequenza di lettura del materiale contenuto in questi file.
+Descrivo rapidamente la sequenza di lettura del materiale contenuto in questo pregetto,
+ricordo a tutti che questo progetto ha scopo didattico, manca quindi di alcune parti 
+come ad sempio la parte di sanitizzazione dei parametri passati via form o get,
+vi invito quindi a leggere almeno un articolo che parla di come fare 
+https://www.html.it/pag/65914/form-dinvio-e-inserimento-dei-dati/ .
 
 - Prima leggere il file index.php e function.php
 - Poi il file blog.php
@@ -43,7 +47,7 @@ Iniziate con le variabili e fatemi sapere come vi trovate
 Per poterlo usare è necessario installare SASS sul proprio computer:
 https://sass-lang.com/install
 
-e poi configurare netbeans per usarlo
+e poi configurare netbeans per usarlo https://medium.com/@raaechelb/sass-installing-on-netbeans-and-getting-started-2b5ce99d985c
 
 ## I miei riferimenti:
 
