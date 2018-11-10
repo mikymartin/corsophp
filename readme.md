@@ -187,3 +187,39 @@ E' possibile autenticare un utente in molti modi, i più diffusi sono via sessio
 Un buon articolo è il seguente https://www.html.it/articoli/gestire-gli-utenti-con-php/
 
 Per quanto ci riguarda noi useremo un'autenticazione via [cookie](https://www.html.it/articoli/gestione-dei-cookie/) 
+
+## Abilitare un cookie ##
+
+Io l'ho fatto tramite una funzione che troverete nel file funtion.php
+```php
+function settaCookie($ID_UTENTE, $TEMPO){
+            // creiamo un cookies, gli assegnamo in valore e definiamo quanto deve durare
+            setcookie('LOGIN', $ID_UTENTE, time()+$TEMPO); // Identifica l'utente
+      }
+```
+'LOGIN' è il nome del cookie, $ID_UTENTE è il valore del cookie e time()+$TEMPO indica la durata del cookie
+
+Il cookie una volta creato **diventerà disponibile solo dopo il primo ricaricamento di una pagina qualsiasi**
+
+Date una occhiata a login.php per vedere come ho fatto.
+
+Per verificare se un utente è autenticato dovrete verificare se il cookie esiste
+```php
+        if(isset($_COOKIE['LOGIN'])){
+                    // stampo il bottone bottone di logout
+                    echo"<p>Benvenuto ".$_COOKIE['LOGIN']."</p>";
+                    echo'<a href="login.php?logout=yes">Logout</a>';
+        }
+```
+
+## Disabilitare il cookie Login ##
+
+```php
+if($_GET['logout']=='yes'){
+    setcookie("LOGIN", "", time()-3600);
+    // al prossimo ricaricamento di pagina il cookie non esiterà più
+    // è necessario forzare il ricaricamento della pagina per non vederlo più
+    
+    Header('Location: login.php');
+}
+```
