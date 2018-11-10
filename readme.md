@@ -54,6 +54,8 @@ e poi configurare netbeans per usarlo
 
 # How TO
 
+Vi suggerisco questa guida: https://www.html.it/guide/guida-php-e-mysql-pratica/
+
 ## Connettersi ad un DB con PHP e chiudere la connessione
 
 ```php
@@ -117,4 +119,28 @@ mysqli_data_seek ($result , 0);
 ```
 
 ## Salvare i dati in una tabella del DB
-Prima di tutto dovrete connetervi al DB  poi potrete eseguire  una query di inserimento  
+Prima di tutto dovrete connetervi al DB poi potrete eseguire
+- una query di inserimento  (se dovete inserire per la prima volta un dato, o una serie di dati,  non ancora esistenti)
+- una query di aggiornamento (se dovete aggiornare una dato, o una serie di dati,  già esistenti)
+
+
+### Query di inserimento
+```php
+    $query = "INSERT INTO posts ('id','datecreation','title','content') VALUES ('', '','$title','$content')";
+    // nella prima coppia parentesi vengono dichiarati i nomi dei campi della tabella
+    // nella seconda coppia di parentesi i valori che verranno inseriti
+    // notate i due apici singoli '' come valori dei due primi campi
+    //non verrà inserito nulla ma dovranno essere dichiarati comunque) perchè iò numero degli inserimenti
+    // dovrà essere uguale al numero dei campi dichiarati e nel corrispondete ordine
+    // OCCHIO SONO DUE APICI SINGOLI ' (quello sotto il punto di domanda)
+
+``
+
+`
+### Query di aggiornamento
+
+```php
+    $queryupdate="UPDATE posts SET  title='".$title"', content='".$content."' WHERE id=".$id;
+    // echo"QUERY AGGIORNAMENTO $queryupdate"; // se volete vederla a schermo
+    mysqli_query($link,$queryupdate);
+```
