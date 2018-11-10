@@ -127,14 +127,15 @@ Prima di tutto dovrete connetervi al DB poi potrete eseguire
 ### Query di inserimento
 ```php
     $query = "INSERT INTO posts ('id','datecreation','title','content') VALUES ('', '','$title','$content')";
-    // nella prima coppia parentesi vengono dichiarati i nomi dei campi della tabella
-    // nella seconda coppia di parentesi i valori che verranno inseriti
-    // notate i due apici singoli '' come valori dei due primi campi
-    //non verrà inserito nulla ma dovranno essere dichiarati comunque) perchè iò numero degli inserimenti
-    // dovrà essere uguale al numero dei campi dichiarati e nel corrispondete ordine
-    // OCCHIO SONO DUE APICI SINGOLI ' (quello sotto il punto di domanda)
-
 ```
+Nella prima coppia parentesi vengono dichiarati i nomi dei campi della tabella
+nella seconda coppia di parentesi i valori che verranno inseriti
+
+Notate i due apici singoli '' come valori dei due primi campi, non verrà inserito nulla ma dovranno essere dichiarati comunque)
+perchè il numero degli inserimenti dovrà essere uguale al numero dei campi dichiarati e nel corrispondete ordine
+
+**OCCHIO SONO DUE APICI SINGOLI ' ** (quello sotto il punto di domanda)
+
 ### Query di aggiornamento
 
 ```php
