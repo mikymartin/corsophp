@@ -109,7 +109,7 @@ procedendo così fino alla fine della risorsa $result
 ```
 **NON potete fare due cicli while di fila** sulla medesima risorsa ($result), 
 senza aver prima resettato il puntatore di $result.
-Quindi se dovrete ripetere il ciclo while su $result resettate il puntatore con il comando
+Quindi se dovrete ripetere il ciclo while su $result , dopo il primo ciclo resettate il puntatore con il comando
 ```php
 mysqli_data_seek ($result , 0);
-```
+``
