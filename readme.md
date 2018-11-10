@@ -112,4 +112,4 @@ senza aver prima resettato il puntatore di $result.
 Quindi se dovrete ripetere il ciclo while su $result , dopo il primo ciclo resettate il puntatore con il comando
 ```php
 mysqli_data_seek ($result , 0);
-``
+```
