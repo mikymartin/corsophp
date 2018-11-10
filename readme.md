@@ -177,5 +177,5 @@ form è il tag che crea un modulo di invio dati, le sue proprietà più importan
 nella pagina indicata in action= i dati verranno letti così, es:
 ```php
 $title=$_POST['title'];
-dove ['title'] è il nome del campo contenuto nel form
 ```
+dove ['title'] è il nome del campo contenuto nel form
