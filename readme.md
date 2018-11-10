@@ -47,6 +47,8 @@ e poi configurare netbeans per usarlo
 
 ## I miei riferimenti:
 
+[me]: https://avatars0.githubusercontent.com/u/1137971?s=460&v=4 "Michele Martinello"
+
 - e-mail: mikymartin@gmail.com
 - cell/whatsapp: +393472738963
 
@@ -88,7 +90,7 @@ $result=mysqli_query($link,$query);
 ```
 ## Accedere ai dati del risultato di una query
 
-Supponendo di usare la query precedente utilizzerete un ciclo while
+Supponendo di usare la query precedente utilizzerete un ciclo [while] ( http://php.net/while)
 il ciclo while si esegiurà finche l'espressione tra parentesi è vera, nel caso specifico finchè
 $row avrà un valore, cioè finchè mysqli_fetch_assoc($result) 
 troverà una riga (detta anche recordset) in $result.
@@ -96,16 +98,16 @@ Ogni volta che viene trovata una riga il puntatore del ciclo while viene fatto a
 procedendo così fino alla fine della risorsa $result
 
 ```php
-            while($row = mysqli_fetch_assoc($result)){
-               $id=$row['id'];
-               $postType=$row['postType'];
-               $datadiCreazione=$row['datecreation'];
-               $titolo=$row['title'];
-               $titolo=$row['content']; 
-               // qui dovrete fare qualcosa, tipo stampare (echo) questi valori
-               // magari insieme a dei tag HTML per dare una struttura 
-               // alla presentazione di questi dati
-            }
+while($row = mysqli_fetch_assoc($result)){
+    $id=$row['id'];
+    $postType=$row['postType'];
+    $datadiCreazione=$row['datecreation'];
+    $titolo=$row['title'];
+    $titolo=$row['content']; 
+    // qui dovrete fare qualcosa, tipo stampare (echo) questi valori
+    // magari insieme a dei tag HTML per dare una struttura 
+    // alla presentazione di questi dati
+}
 ```
 **NON potete fare due cicli while di fila** sulla medesima risorsa ($result), 
 senza aver prima resettato il puntatore di $result.
@@ -113,3 +115,6 @@ Quindi se dovrete ripetere il ciclo while su $result , dopo il primo ciclo reset
 ```php
 mysqli_data_seek ($result , 0);
 ```
+
+## Salvare i dati in una tabella del DB
+Prima di tutto dovrete connetervi al DB  poi potrete eseguire  una query di inserimento  
