@@ -1,6 +1,6 @@
 # DOCUMENTAZIONE
 
-Descrivo rapidamente la sequenza di lettura del materiale contenuto in questo pregetto,
+Descrivo rapidamente la sequenza di lettura del materiale contenuto in questo progetto,
 ricordo a tutti che questo progetto ha scopo didattico, manca quindi di alcune parti 
 come ad sempio la parte di sanitizzazione dei parametri passati via form o get,
 vi invito quindi a leggere almeno un articolo che parla di come fare 
