@@ -12,12 +12,14 @@ Questo è un file SCSS
     Author     : michelemartinello
 */
 /*SCSS variable*/
+$bordercolor = #f1f1f1;
+
 h2 {
   font-size: 2rem; }
 
 /* Bordered form */
 form {
-  border: 3px solid #f1f1f1; }
+  border: 3px solid $bordercolor; }
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
