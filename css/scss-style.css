@@ -11,15 +11,16 @@ Questo è un file SCSS
     Created on : 30-ott-2018, 14.25.41
     Author     : michelemartinello
 */
-/*SCSS variable*/
-$bordercolor = #f1f1f1;
+/*SCSS variable
+$bordercolor: #f1f1f1;*/
 
 h2 {
   font-size: 2rem; }
 
 /* Bordered form */
 form {
-  border: 3px solid $bordercolor; }
+  border: 3px solid #fff;
+}
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
