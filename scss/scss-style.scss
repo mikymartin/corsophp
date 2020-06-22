@@ -3,10 +3,12 @@ Questo è un file SCSS
     NON va linkato direttamente questo file al proprio sito, esso va prima COMPILATO!
     il file da linkare è quello risultato dalla compilazione: css/scss-stile.css (vedete che è .CSS)
 
-    se netBeans è stato configurato correttamente ad ogni salvataggio il file SCSS verrà compilato
+    il file scss-style.min.css è la versione minificata, per risparmiare spazio. 
+    Di solito si sviluppa con la versione non  minificata e si va online con la versione minificata
+
+    Se netBeans è stato configurato correttamente ad ogni salvataggio il file SCSS verrà compilato
     e verranno generati due file nella cartella css, essi dovranno essere caricati entrambi nel vostro sito
-*/
-/* 
+
     Created on : 30-ott-2018, 14.25.41
     Author     : michelemartinello
 */
