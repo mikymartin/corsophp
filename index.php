@@ -1,4 +1,5 @@
 <?php
+/* Copiare le tabelle da mamp*/
 /*
  * Questa è la pagina con cui si amministrano i contenuti nel blog
  * Vi permetterà di inserire POST e PAGINE */
