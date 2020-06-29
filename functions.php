@@ -141,7 +141,8 @@ function excerpt($string,$length)
     */
     
     $str_len = strlen($string); // misura la lunghezza della stringa (cercate strlen nel manuale di php.net)
-    $string = strip_tags($string); // rimuove i tag html che trova, per evitare che la troncatura spezzi a metà un tag (cercate strip_tags su php.net)
+    $string = strip_tags($string); // rimuove i tag html che trova, 
+    //per evitare che la troncatura spezzi a metà un tag (cercate strip_tags su php.net)
 
     if ($str_len > $length) {
 
